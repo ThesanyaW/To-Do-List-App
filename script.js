@@ -2,6 +2,7 @@ const taskInput = document.getElementById('taskInput');
 const addTaskBtn = document.getElementById('addTaskBtn');
 const clearAllBtn = document.getElementById('clearAllBtn');
 const taskList = document.getElementById('taskList');
+const filter = document.getElementById('filter');
 
 function updateDateTime() {
     const now = new Date();
@@ -42,6 +43,23 @@ addTaskBtn.addEventListener('click', () => {
 clearAllBtn.addEventListener('click', () => {
     taskList.innerHTML = "";
     localStorage.removeItem('tasks');
+});
+
+filter.addEventListener('change', () => {
+    const tasks = document.querySelectorAll('#taskList li');
+    tasks.forEach(task => {
+        switch (filter.value) {
+            case 'all':
+                task.style.display = 'block';
+                break;
+            case 'completed':
+                task.style.display = task.classList.contains('completed') ? 'block' : 'none';
+                break;
+            case 'pending':
+                task.style.display = !task.classList.contains('completed') ? 'block' : 'none';
+                break;
+        }
+    });
 });
 
 // Save tasks to local storage
