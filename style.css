@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+#app {
+    max-width: 400px;
+    margin: auto;
+}
+#taskInput {
+    width: 70%;
+    padding: 10px;
+}
+#addTaskBtn {
+    padding: 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
