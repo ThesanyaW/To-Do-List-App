@@ -1,5 +1,6 @@
 const taskInput = document.getElementById('taskInput');
 const addTaskBtn = document.getElementById('addTaskBtn');
+const clearAllBtn = document.getElementById('clearAllBtn');
 const taskList = document.getElementById('taskList');
 
 addTaskBtn.addEventListener('click', () => {
@@ -28,6 +29,11 @@ addTaskBtn.addEventListener('click', () => {
         taskInput.value = "";
         saveTasks();
     }
+});
+
+clearAllBtn.addEventListener('click', () => {
+    taskList.innerHTML = "";
+    localStorage.removeItem('tasks');
 });
 
 // Save tasks to local storage
