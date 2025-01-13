@@ -16,12 +16,13 @@ addTaskBtn.addEventListener('click', () => {
             taskList.removeChild(li);
         });
 
+        // Add toggle for marking as completed
+        li.addEventListener('click', () => {
+            li.classList.toggle('completed');
+        });
+
         li.appendChild(deleteBtn);
         taskList.appendChild(li);
         taskInput.value = "";
     }
-});
-
-li.addEventListener('click', () => {
-    li.classList.toggle('completed');
 });
