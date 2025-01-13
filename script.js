@@ -3,6 +3,14 @@ const addTaskBtn = document.getElementById('addTaskBtn');
 const clearAllBtn = document.getElementById('clearAllBtn');
 const taskList = document.getElementById('taskList');
 
+function updateDateTime() {
+    const now = new Date();
+    document.getElementById('dateTime').textContent = now.toLocaleString();
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+
+
 addTaskBtn.addEventListener('click', () => {
     const taskText = taskInput.value;
     if (taskText.trim() !== "") {
