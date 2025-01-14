@@ -12,31 +12,127 @@ body {
 #app {
     width: 100%;
     max-width: 500px;
-    background: #fff;
+    background: #ffffff;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
+
+#dateTime {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+#taskInputContainer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
 #taskInput {
-    width: 70%;
+    flex: 1;
     padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
 }
+
 #addTaskBtn {
-    padding: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
 }
+
+#addTaskBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#clearAllBtn, #clearCompletedBtn {
+    padding: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#clearCompletedBtn {
+    background-color: #ffc107;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
+
 li {
     background: #f9f9f9;
-    margin: 5px 0;
+    margin: 5px;
     padding: 10px;
     border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
 }
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
 .completed {
     text-decoration: line-through;
     color: gray;
 }
 
+button.delete {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button.delete:hover {
+    background-color: #cc0000;
+}
+
+#filter {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
