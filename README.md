@@ -92,4 +92,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 🌟 **Start managing your tasks effectively with this lightweight and user-friendly To-Do List App!**
-```
+
+
